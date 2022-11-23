@@ -1,0 +1,187 @@
+/* BEGIN Thin */
+@font-face {
+  font-family: Roboto;
+  src: url("./fonts/roboto-thin-webfont.woff2") format("woff2"), url("./fonts/roboto-thin-webfont.woff") format("woff");
+  font-weight: 100;
+  font-style: normal; }
+/* END Thin */
+/* BEGIN Thin Italic */
+@font-face {
+  font-family: Roboto;
+  src: url("./fonts/roboto-thinitalic-webfont.woff2") format("woff2"), url("./fonts/roboto-thinitalic-webfont.woff") format("woff");
+  font-weight: 100;
+  font-style: italic; }
+/* END Thin Italic */
+/* BEGIN Light */
+@font-face {
+  font-family: Roboto;
+  src: url("./fonts/roboto-light-webfont.woff2") format("woff2"), url("./fonts/roboto-light-webfont.woff") format("woff");
+  font-weight: 300;
+  font-style: normal; }
+/* END Light */
+/* BEGIN Light Italic */
+@font-face {
+  font-family: Roboto;
+  src: url("./fonts/roboto-lightitalic-webfont.woff2") format("woff2"), url("./fonts/roboto-lightitalic-webfont.woff") format("woff");
+  font-weight: 300;
+  font-style: italic; }
+/* END Light Italic */
+/* BEGIN Regular */
+@font-face {
+  font-family: Roboto;
+  src: url("./fonts/roboto-regular-webfont.woff2") format("woff2"), url("./fonts/roboto-regular-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+@font-face {
+  font-family: Roboto;
+  src: url("./fonts/roboto-regular-webfont.woff2") format("woff2"), url("./fonts/roboto-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+/* END Regular */
+/* BEGIN Italic */
+@font-face {
+  font-family: Roboto;
+  src: url("./fonts/roboto-italic-webfont.woff2") format("woff2"), url("./fonts/roboto-italic-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: italic; }
+@font-face {
+  font-family: Roboto;
+  src: url("./fonts/roboto-italic-webfont.woff2") format("woff2"), url("./fonts/roboto-italic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: italic; }
+/* END Italic */
+/* BEGIN Medium */
+@font-face {
+  font-family: Roboto;
+  src: url("./fonts/roboto-medium-webfont.woff2") format("woff2"), url("./fonts/roboto-medium-webfont.woff") format("woff");
+  font-weight: 500;
+  font-style: normal; }
+/* END Medium */
+/* BEGIN Medium Italic */
+@font-face {
+  font-family: Roboto;
+  src: url("./fonts/roboto-mediumitalic-webfont.woff2") format("woff2"), url("./fonts/roboto-medium-webfont.woff") format("woff");
+  font-weight: 500;
+  font-style: italic; }
+/* END Medium Italic */
+/* BEGIN Bold */
+@font-face {
+  font-family: Roboto;
+  src: url("./fonts/roboto-bold-webfont.woff2") format("woff2"), url("./fonts/roboto-bold-webfont.woff") format("woff");
+  font-weight: 700;
+  font-style: normal; }
+@font-face {
+  font-family: Roboto;
+  src: url("./fonts/roboto-bold-webfont.woff2") format("woff2"), url("./fonts/roboto-bold-webfont.woff") format("woff");
+  font-weight: bold;
+  font-style: normal; }
+/* END Bold */
+/* BEGIN Bold Italic */
+@font-face {
+  font-family: Roboto;
+  src: url("./fonts/roboto-bolditalic-webfont.woff2") format("woff2"), url("./fonts/roboto-bolditalic-webfont.woff") format("woff");
+  font-weight: 700;
+  font-style: italic; }
+@font-face {
+  font-family: Roboto;
+  src: url("./fonts/roboto-bolditalic-webfont.woff2") format("woff2"), url("./fonts/roboto-bolditalic-webfont.woff") format("woff");
+  font-weight: bold;
+  font-style: italic; }
+/* END Bold Italic */
+/* BEGIN Black */
+@font-face {
+  font-family: Roboto;
+  src: url("./fonts/roboto-black-webfont.woff2") format("woff2"), url("./fonts/roboto-blackitalic-webfont.woff") format("woff");
+  font-weight: 900;
+  font-style: normal; }
+/* END Black */
+/* BEGIN Black Italic */
+@font-face {
+  font-family: Roboto;
+  src: url("./fonts/roboto-blackitalic-webfont.woff2") format("woff2"), url("./fonts/roboto-blackitalic-webfont.woff") format("woff");
+  font-weight: 900;
+  font-style: italic; }
+/* END Black Italic */
+
+body {
+  color:#0F172A;
+  font-family: 'Roboto', sans-serif;
+  background-color: #F8FAFC;
+}
+
+#content {
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#content h1 {
+  margin: 0;
+  font-size: 4rem;
+}
+
+.nav {
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  display: flex;
+  justify-content: center;
+  color:#F8FAFC;
+  background-color: rgba(248, 250, 252, 0.09);
+  padding: 1rem 1.5rem;
+  gap: 1rem;
+  font-weight: 500;
+}
+
+.nav > div {
+  transition: all 0.1s ease-out;
+  cursor: pointer;
+}
+
+nav > div:hover {
+  transform: scale(1.1);
+}
+
+.headline {
+  border-radius: 16px;
+  border: #0F172A solid 3px;
+  margin: 1.5rem;
+  padding: 1rem;
+  text-align: center;
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.headline div:last-child {
+  font-size: 1.1rem;
+}
+
+.sidebar {
+  background-image: url(./img/mae-mu-unsplash.jpg);
+  background-size: 100% auto;
+  padding: 0 1.5rem;
+  flex: 2;
+  background-color: #000000;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  justify-items: center;
+}
+
+.sidebar > div:last-child {
+  width: 80%;
+  height: 80%;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 16px;
+  align-self: center;
+}
+
+img {
+  align-self: center;
+  border-radius: 16px;
+  width: min(450px, 50%);
+  opacity: 0.9;
+}
