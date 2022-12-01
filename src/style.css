@@ -156,11 +156,11 @@ nav > button:hover {
 }
 
 .home {
+  margin: 1.5rem;
   background-color: rgba(248, 250, 252, 0.9);
   width: 500px;
   border-radius: 16px;
   border: #0F172A solid 3px;
-  margin: 1.5rem;
   padding: 1rem;
   text-align: center;
   flex: 1.5;
@@ -179,61 +179,66 @@ nav > button:hover {
   font-size: 1.1rem;
 }
 
-img {
-  align-self: center;
-  border-radius: 16px;
-  width: min(450px, 50%);
-}
-
 .menu {
-  margin: 0;
+  width: 100%;
+  border-radius: 16px;
+  margin: 1.5rem;
   padding: 0;
-  background-color: #F8FAFC;
+  background-color: rgba(248, 250, 252, 0.9);
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto repeat(2, 1fr);
-  place-items: center;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto 1fr;
 }
 
-.menu > div {
+.menu > div > div {
   display: grid;
   place-items: center;
   text-align: center;
   padding: 1.5rem;
 }
 
-.menu > div > :first-child{
+.menu > div > div > :first-child{
   font-weight: 500;
 }
 
-.menu > div > :not(:first-child) {
+.menu > div > div > :not(:first-child) {
   font-size: 0.75rem;
 }
 
 .menu > :first-child {
   grid-column: 2 / -1;
-  width: 100%;
   place-self: center;
   text-align: center;
   padding: 0.5rem 0;
   font-size: 2rem;
   font-weight: 700;
-  background-color: #EA580C;
+  color: #EA580C;
 }
 
 .menu > :nth-child(2) {
- background-color: #0F172A;
   grid-row: 1 / -1;
-  background-size: 100%;
+  background-image: url(./img/eiliv-aceron-uBigm8w_MpA-unsplash.jpg);
+  background-size: 100% auto;
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+  background-color: #0F172A;
+  padding: 0;
 }
 
-.menu > div > img {
+.menu > :last-child {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding: 1rem;
+  gap: 1rem;
+}
+
+/*.menu > div > img {
   width: 100%;
   height: auto;
   border-radius: 0;
 }
-
-.menu > .menulist {
+*/
+.menu .menulist {
   border-bottom: #0F172A 3px solid;
   height: 150px;
 }
@@ -244,11 +249,11 @@ img {
 }
 
 .contact {
+  margin: 1.5rem;
   display: grid;
   grid-template-columns: 1fr 2fr;
   background-color: rgba(248, 250, 252, 0.9);
   width: 100%;
-  margin: 1.5rem;
   border-radius: 16px;
 }
 
@@ -279,7 +284,7 @@ img {
   text-align: center;
 }
 
-.contact > :last-child {
+.contact > div:last-child {
   place-self: center;
   border: #0F172A solid 3px;
   border-radius: 16px;

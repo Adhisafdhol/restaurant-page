@@ -8,19 +8,22 @@ function menu() {
   div.textContent = 'Today\'s Menu';
   menu.appendChild(div)
 
+  const burgers = document.createElement('div');
+
   const imgHolder = document.createElement('div');
 
   const myImage = new Image();
   myImage.src = img;
-  imgHolder.appendChild(myImage);
+  
   menu.appendChild(imgHolder)
 
 
-  const menuOne = createMenu('Galaxy Beef Burger', 'Beef Patty, Onions, Tomatoes, pickles, Lettuce, Ketchup, Mayo, Mustard');
-  menu.appendChild(menuOne);
-  menu.appendChild(createMenu('Chicken Burger', 'Crispy Chicken, Chedder Cheese, Grilled Onion & Tomatoes, Lettuce, Pickles, Garlic Sauce, Mayo, Chipotle Sauce'));
-  menu.appendChild(createMenu('Celestial Special Burger', 'Beef Patty. Cream of Mushroom, Mozza Cheeze, Grilled Onions, Mayo'));
-  menu.appendChild(createMenu('Hot Doritos Burger', 'Crispy Chicken, Mozza Cheeze, Doritos, Grilled Onion & Tomatoes, Lettuce, Garlic Sauce, Buffalo Sauce. Mayo'))
+  burgers.appendChild(createMenu('Galaxy Beef Burger', 'Beef Patty, Onions, Tomatoes, pickles, Lettuce, Ketchup, Mayo, Mustard'));
+  burgers.appendChild(createMenu('Chicken Burger', 'Crispy Chicken, Chedder Cheese, Grilled Onion & Tomatoes, Lettuce, Pickles, Garlic Sauce, Mayo, Chipotle Sauce'));
+  burgers.appendChild(createMenu('Celestial Special Burger', 'Beef Patty. Cream of Mushroom, Mozza Cheeze, Grilled Onions, Mayo'));
+  burgers.appendChild(createMenu('Hot Doritos Burger', 'Crispy Chicken, Mozza Cheeze, Doritos, Grilled Onion & Tomatoes, Lettuce, Garlic Sauce, Buffalo Sauce. Mayo'));
+
+  menu.appendChild(burgers)
   
   return menu;
 }
