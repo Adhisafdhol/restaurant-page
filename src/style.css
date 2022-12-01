@@ -105,6 +105,8 @@
 
 body {
   color:#0F172A;
+  background-image: url(./img/mae-mu-unsplash.jpg);
+  background-size: 100% auto;
   font-family: 'Roboto', sans-serif;
   background-color: #F8FAFC;
 }
@@ -115,33 +117,47 @@ body {
   flex-wrap: wrap;
 }
 
-#content h1 {
+.home h1 {
   margin: 0;
   font-size: 4rem;
 }
 
 .nav {
+  height: fit-content;
+  position: absolute;
+  left: 3rem;
   border-bottom-left-radius: 16px;
   border-bottom-right-radius: 16px;
   display: flex;
   justify-content: center;
   color:#F8FAFC;
-  background-color: rgba(248, 250, 252, 0.09);
+  background-color: rgba(0, 0, 0, 0.9);
   padding: 1rem 1.5rem;
-  gap: 1rem;
+  gap: 1.5rem;
+  font-size: 1rem;
   font-weight: 500;
+  z-index: 2;
 }
 
-.nav > div {
+.nav > button {
+  color:#F8FAFC;
   transition: all 0.1s ease-out;
+  background: none;
+  border: none;
   cursor: pointer;
 }
 
-nav > div:hover {
+nav > button:hover {
   transform: scale(1.1);
 }
 
-.headline {
+.nav > .active {
+  color: #EA580C;
+}
+
+.home {
+  background-color: rgba(248, 250, 252, 0.9);
+  width: 500px;
   border-radius: 16px;
   border: #0F172A solid 3px;
   margin: 1.5rem;
@@ -156,32 +172,116 @@ nav > div:hover {
   font-style: italic;
 }
 
-.headline div:last-child {
+.home > :first-child {
+  color: #EA580C;
+}
+.home div:last-child {
   font-size: 1.1rem;
-}
-
-.sidebar {
-  background-image: url(./img/mae-mu-unsplash.jpg);
-  background-size: 100% auto;
-  padding: 0 1.5rem;
-  flex: 2;
-  background-color: #000000;
-  display: grid;
-  grid-template-rows: auto 1fr;
-  justify-items: center;
-}
-
-.sidebar > div:last-child {
-  width: 80%;
-  height: 80%;
-  background-color: rgba(0, 0, 0, 0.6);
-  border-radius: 16px;
-  align-self: center;
 }
 
 img {
   align-self: center;
   border-radius: 16px;
   width: min(450px, 50%);
-  opacity: 0.9;
+}
+
+.menu {
+  margin: 0;
+  padding: 0;
+  background-color: #F8FAFC;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto repeat(2, 1fr);
+  place-items: center;
+}
+
+.menu > div {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.menu > div > :first-child{
+  font-weight: 500;
+}
+
+.menu > div > :not(:first-child) {
+  font-size: 0.75rem;
+}
+
+.menu > :first-child {
+  grid-column: 2 / -1;
+  width: 100%;
+  place-self: center;
+  text-align: center;
+  padding: 0.5rem 0;
+  font-size: 2rem;
+  font-weight: 700;
+  background-color: #EA580C;
+}
+
+.menu > :nth-child(2) {
+ background-color: #0F172A;
+  grid-row: 1 / -1;
+  background-size: 100%;
+}
+
+.menu > div > img {
+  width: 100%;
+  height: auto;
+  border-radius: 0;
+}
+
+.menu > .menulist {
+  border-bottom: #0F172A 3px solid;
+  height: 150px;
+}
+
+.menulist {
+  display: grid;
+  align-content: end;
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  background-color: rgba(248, 250, 252, 0.9);
+  width: 100%;
+  margin: 1.5rem;
+  border-radius: 16px;
+}
+
+.contact > :first-child {
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+  background-color: #0F172A;
+  background-image: url(./img/nasa-rTZW4f02zY8-unsplash.jpg);
+  background-size: auto 100%;
+  grid-row: 1 / -1;
+  grid-column: 1 / 2;
+}
+
+.contact > div > h1 {
+  font-size: 2rem;
+  margin: 0;
+  color: #EA580C;
+  text-align: center;
+}
+
+.info {
+  display: grid;
+  place-content: center;
+  margin: 0.5rem;
+  color: #0F172A;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.contact > :last-child {
+  place-self: center;
+  border: #0F172A solid 3px;
+  border-radius: 16px;
+  padding: 3rem;
 }

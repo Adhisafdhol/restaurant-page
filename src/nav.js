@@ -2,14 +2,17 @@ function nav() {
   const nav = document.createElement('nav');
   nav.classList.add('nav');
 
-  const home = document.createElement('div');
+  const home = document.createElement('button');
   home.textContent = 'Home';
+  home.classList.add('nav-home');
 
-  const menu = document.createElement('div');
+  const menu = document.createElement('button');
   menu.textContent = 'Menu';
+  menu.classList.add('nav-menu');
 
-  const contact = document.createElement('div');
+  const contact = document.createElement('button');
   contact.textContent = 'Contact';
+  contact.classList.add('nav-contact');
 
   nav.appendChild(home);
   nav.appendChild(menu);

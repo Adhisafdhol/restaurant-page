@@ -1,34 +1,52 @@
 import './style.css';
-import img from './img/mae-mu-unsplash.jpg';
 import 'normalize.css';
 import { nav } from './nav';
+import { home } from './home';
+import { menu } from './menu'
+import { contact } from './contact'
 
 function component() {
-  const sidebar = document.createElement('div');
-  sidebar.classList.add('sidebar');
-  const review = document.createElement('div');
-  review.classList.add('review');
-  review.textContent = 'Best quality burgers serve directly to your plate! The atmosphere and customer service make you feel like you are in another world.';
-  const content = document.getElementById('content')
-  const headline = document.createElement('div');
-  headline.classList.add('headline');
-  const heading = document.createElement('h1');
-  heading.textContent = 'Celestial Burger';
-  headline.appendChild(heading);
-  const hQuote = document.createElement('div');
-  hQuote.textContent = 'Delicious burgers serve from otherworldly dimension.';
-  headline.appendChild(hQuote);
+  const content = document.getElementById('content');
 
-
-  const myImg = new Image();
-  myImg.src = img;
-  
-  content.appendChild(headline);
-  sidebar.appendChild(nav());
-  sidebar.appendChild(review);
-  content.appendChild(sidebar);
+  content.appendChild(nav());
+  content.appendChild(home());
   
   return content;
 }
 
 document.body.appendChild(component());
+
+const check = (() => {
+  const content = document.getElementById('content');
+  let currentPage = 'nav-home';
+  const buttons = document.querySelectorAll('.nav > button');
+
+  buttons.forEach(button => button.addEventListener('click', activate));
+
+  function activate(e) {
+    currentPage = this.className;
+    buttons.forEach(button => deactivate(button));
+    this.classList.add('active');
+    loadPage(e);
+  }
+
+  function deactivate (button) {
+    console.log(button.className !== currentPage);
+    if (button.className !== currentPage ) {
+      button.classList.remove('active');
+    }
+  }
+
+  function loadPage(e) {
+    console.log(e.target.textContent)
+    if(e.target.textContent === 'Home') {
+      content.replaceChild(home(), document.querySelector('#content > :nth-child(2)'))
+    } else if (e.target.textContent === 'Menu') {
+      content.replaceChild(menu(), document.querySelector('#content > :nth-child(2)'));
+    } else if (e.target.textContent === 'Contact') {
+      content.replaceChild(contact(), document.querySelector('#content > :nth-child(2)'))
+    } else {
+      return;
+    } 
+  }
+})();
