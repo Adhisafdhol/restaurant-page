@@ -130,6 +130,7 @@ body {
 }
 
 .nav {
+  width: min-content;
   height: fit-content;
   position: absolute;
   left: 3rem;
@@ -323,5 +324,12 @@ nav > button:hover {
     border-top-right-radius: 8px;
     border-bottom-left-radius: 0;
     background-size: 100% auto;
+  }
+
+  #content > nav {
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
   }
 }
