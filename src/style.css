@@ -199,6 +199,7 @@ nav > button:hover {
 }
 
 .menu h1 {
+  border-top-right-radius: 8px;
   margin: 0;
   padding: 1rem 0;
   background-color: var(--dark-accent);
@@ -214,7 +215,11 @@ nav > button:hover {
 }
 
 .menu img {
-  height: 300px;
+  height: 81vh;
+  border: 3px solid var(--accent-color-1);
+  border-bottom-color: var(--dark-accent);
+  border-left-color: var(--dark-accent);
+  border-radius: 8px;
   width: auto;
 }
 
