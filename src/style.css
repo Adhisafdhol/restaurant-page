@@ -249,7 +249,8 @@ nav > button:hover {
   height: 150px;
   display: grid;
   place-items: center;
-  place-content: end;
+  align-content: end;
+  text-align: center;
   gap: 1rem;
   padding: 1.5rem;
 }
@@ -303,4 +304,10 @@ nav > button:hover {
   border: #0F172A solid 3px;
   border-radius: 16px;
   padding: 3rem;
+}
+
+@media only screen and (max-width: 720px) {
+  .menu {
+    grid-template-columns: 1fr;
+  }
 }
