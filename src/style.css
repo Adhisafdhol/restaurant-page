@@ -124,12 +124,6 @@ body {
   flex-wrap: wrap;
 }
 
-.home,
-.menu,
-.contact {
-  margin: (0.75rem, 1.5rem, 3vw);
-}
-
 .home h1 {
   margin: 0;
   font-size: clamp(2rem, 4rem, 5vw);
@@ -309,6 +303,12 @@ nav > button:hover {
   border: #0F172A solid 3px;
   border-radius: 16px;
   padding: clamp(1.25rem, 2.5rem, 4vw);
+}
+
+.home,
+.menu,
+.contact {
+  margin: clamp(0.75rem, 1.5rem, 3vw);
 }
 
 @media only screen and (max-width: 720px) {
