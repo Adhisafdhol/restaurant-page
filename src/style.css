@@ -132,7 +132,7 @@ body {
 
 .home h1 {
   margin: 0;
-  font-size: clamp(3rem, 4rem, 5vw);
+  font-size: clamp(2rem, 4rem, 5vw);
 }
 
 .nav {
