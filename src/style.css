@@ -333,4 +333,12 @@ nav > button:hover {
     left: 0;
     right: 0;
   }
+
+  .menu-container {
+    border-bottom-left-radius: 16px;
+  }
+
+  .menu-list {
+    border-bottom-left-radius: 16px;
+  }
 }
