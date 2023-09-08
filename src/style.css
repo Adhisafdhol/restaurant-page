@@ -124,6 +124,12 @@ body {
   flex-wrap: wrap;
 }
 
+.home,
+.menu,
+.contact {
+  margin: clamp(0.75rem, 1.5rem, 3vw)
+}
+
 .home h1 {
   margin: 0;
   font-size: clamp(3rem, 4rem, 5vw);
@@ -165,7 +171,6 @@ nav > button:hover {
 }
 
 .home {
-  margin: 1.5rem;
   background-color: rgba(248, 250, 252, 0.9);
   width: 500px;
   border-radius: 16px;
@@ -193,7 +198,6 @@ nav > button:hover {
   min-height: 100vh;
   width: 100%;
   border-radius: 16px;
-  margin: 1.5rem;
   padding: 0;
   background-color: rgba(248, 250, 252, 0.9);
   display: grid;
@@ -266,7 +270,6 @@ nav > button:hover {
 }
 
 .contact {
-  margin: 1.5rem;
   display: grid;
   grid-template-columns: 1fr 2fr;
   background-color: rgba(248, 250, 252, 0.9);
