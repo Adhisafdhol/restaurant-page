@@ -310,4 +310,8 @@ nav > button:hover {
   .menu {
     grid-template-columns: 1fr;
   }
+
+  .menu h1 {
+    border-top-right-radius: 0;
+  }
 }
