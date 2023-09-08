@@ -14,37 +14,28 @@ function component() {
   return content;
 }
 
+//Append the pages to the html
 document.body.appendChild(component());
 
 const check = (() => {
   const content = document.getElementById('content');
-  let currentPage = 'nav-home';
   const buttons = document.querySelectorAll('.nav > button');
-
   buttons.forEach(button => button.addEventListener('click', activate));
 
   function activate(e) {
-    currentPage = this.className;
-    buttons.forEach(button => deactivate(button));
+    const selectedPage = e.target.getAttribute('data-key')
+    buttons.forEach(button => button.classList.remove('active'));
     this.classList.add('active');
-    loadPage(e);
+    loadPage(selectedPage);
   }
 
-  function deactivate (button) {
-    if (button.className !== currentPage ) {
-      button.classList.remove('active');
-    }
-  }
-
-  function loadPage(e) {
-    if(e.target.textContent === 'Home') {
+  function loadPage(page) {
+    if( page === 'home') {
       content.replaceChild(home(), document.querySelector('#content > :nth-child(2)'))
-    } else if (e.target.textContent === 'Menu') {
+    } else if (page === 'menu') {
       content.replaceChild(menu(), document.querySelector('#content > :nth-child(2)'));
-    } else if (e.target.textContent === 'Contact') {
-      content.replaceChild(contact(), document.querySelector('#content > :nth-child(2)'))
     } else {
-      return;
-    } 
+      content.replaceChild(contact(), document.querySelector('#content > :nth-child(2)'))
+    }
   }
 })();
