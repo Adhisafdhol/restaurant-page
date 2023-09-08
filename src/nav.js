@@ -4,15 +4,16 @@ function nav() {
 
   const home = document.createElement('button');
   home.textContent = 'Home';
-  home.classList.add('nav-home');
+  home.setAttribute('data-key', 'home');
+  home.classList.add('active');
 
   const menu = document.createElement('button');
   menu.textContent = 'Menu';
-  menu.classList.add('nav-menu');
+  menu.setAttribute('data-key', 'menu');
 
   const contact = document.createElement('button');
   contact.textContent = 'Contact';
-  contact.classList.add('nav-contact');
+  contact.setAttribute('data-key', 'contact');
 
   nav.appendChild(home);
   nav.appendChild(menu);
