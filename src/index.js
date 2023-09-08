@@ -31,14 +31,12 @@ const check = (() => {
   }
 
   function deactivate (button) {
-    console.log(button.className !== currentPage);
     if (button.className !== currentPage ) {
       button.classList.remove('active');
     }
   }
 
   function loadPage(e) {
-    console.log(e.target.textContent)
     if(e.target.textContent === 'Home') {
       content.replaceChild(home(), document.querySelector('#content > :nth-child(2)'))
     } else if (e.target.textContent === 'Menu') {

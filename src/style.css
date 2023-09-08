@@ -106,6 +106,7 @@
 :root {
   --dark-color: #000000;
   --dark-accent: #130F40;
+  --accent-color-1: #EA580C;
 }
 
 body {
@@ -158,7 +159,7 @@ nav > button:hover {
 }
 
 .nav > .active {
-  color: #EA580C;
+  color: var(--accent-color-1);
 }
 
 .home {
@@ -179,13 +180,15 @@ nav > button:hover {
 }
 
 .home > :first-child {
-  color: #EA580C;
+  color: var(--accent-color-1);
 }
+
 .home div:last-child {
   font-size: 1.1rem;
 }
 
 .menu {
+  min-height: 100vh;
   width: 100%;
   border-radius: 16px;
   margin: 1.5rem;
@@ -193,65 +196,62 @@ nav > button:hover {
   background-color: rgba(248, 250, 252, 0.9);
   display: grid;
   grid-template-columns: 1fr 2fr;
-  grid-template-rows: auto 1fr;
 }
 
-.menu > div > div {
-  display: grid;
-  place-items: center;
-  text-align: center;
-  padding: 1.5rem;
-}
-
-.menu > div > div > :first-child{
-  font-weight: 500;
-}
-
-.menu > div > div > :not(:first-child) {
-  font-size: 0.75rem;
-}
-
-.menu > :first-child {
-  grid-column: 2 / -1;
-  place-self: center;
-  text-align: center;
-  padding: 0.5rem 0;
-  font-size: 2rem;
+.menu h1 {
+  margin: 0;
+  padding: 1rem 0;
+  background-color: var(--dark-accent);
+  font-size: clamp(2rem, 3vw, 3rem);
   font-weight: 700;
-  color: #EA580C;
+  color: var(--accent-color-1);
 }
 
-.menu > :nth-child(2) {
-  grid-row: 1 / -1;
-  background-image: url(./img/eiliv-aceron-uBigm8w_MpA-unsplash.jpg);
-  background-size: 100% auto;
+.img-container {
+  background-color: var();
+}
+
+.menu img {
+  height: 100vh;
+  width: auto;
+}
+
+.menu > 
+.img-container {
   border-top-left-radius: 16px;
   border-bottom-left-radius: 16px;
-  background-color: #0F172A;
   padding: 0;
 }
 
-.menu > :last-child {
+.menu-container {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  text-align: center;
+}
+
+.menu-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   padding: 1rem;
   gap: 1rem;
 }
 
-/*.menu > div > img {
-  width: 100%;
-  height: auto;
-  border-radius: 0;
-}
-*/
-.menu .menulist {
-  border-bottom: #0F172A 3px solid;
+.menulist {
+  border-bottom: var(--accent-color-1) 3px solid;
   height: 150px;
+  display: grid;
+  place-items: center;
+  place-content: end;
+  gap: 1rem;
+  padding: 1.5rem;
 }
 
-.menulist {
-  display: grid;
-  align-content: end;
+.menulist > :first-child{
+  font-weight: 500;
+}
+
+.menulist > :not(:first-child) {
+  font-size: 0.75rem;
 }
 
 .contact {
@@ -295,8 +295,4 @@ nav > button:hover {
   border: #0F172A solid 3px;
   border-radius: 16px;
   padding: 3rem;
-}
-
-@media only screen and (orientation: portrait) {
-  body:
 }
