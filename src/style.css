@@ -212,22 +212,22 @@ nav > button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 2.5rem 1.5rem;
 }
 
 .menu img {
-  height: 81vh;
+  width: clamp(200px, 400px, 25vw);
   border: 3px solid var(--accent-color-1);
   border-bottom-color: var(--dark-accent);
   border-left-color: var(--dark-accent);
   border-radius: 8px;
-  width: auto;
+  height: auto;
 }
 
 .menu > 
 .img-container {
   border-top-left-radius: 16px;
   border-bottom-left-radius: 16px;
-  padding: 0;
 }
 
 .menu-container {
