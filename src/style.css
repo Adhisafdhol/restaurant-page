@@ -157,6 +157,7 @@ body {
 
 nav > button:hover {
   transform: scale(1.1);
+  text-shadow: 0 0 5px var(--accent-color-1);
 }
 
 .nav > .active {
