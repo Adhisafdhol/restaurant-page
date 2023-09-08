@@ -273,8 +273,8 @@ nav > button:hover {
 }
 
 .contact > :first-child {
-  border-top-left-radius: 16px;
-  border-bottom-left-radius: 16px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
   background-color: #0F172A;
   background-image: url(./img/nasa-rTZW4f02zY8-unsplash.jpg);
   background-size: auto 100%;
@@ -313,5 +313,15 @@ nav > button:hover {
 
   .menu h1 {
     border-top-right-radius: 0;
+  }
+
+  .contact {
+    grid-template-columns: 1fr;
+  }
+
+  .contact > :first-child {
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 0;
+    background-size: 100% auto;
   }
 }
