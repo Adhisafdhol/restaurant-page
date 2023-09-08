@@ -208,11 +208,13 @@ nav > button:hover {
 }
 
 .img-container {
-  background-color: var();
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .menu img {
-  height: 100vh;
+  height: 300px;
   width: auto;
 }
 
@@ -225,6 +227,7 @@ nav > button:hover {
 
 .menu-container {
   display: grid;
+  border-left: var(--dark-accent) 3px solid;
   grid-template-rows: auto 1fr;
   text-align: center;
 }
