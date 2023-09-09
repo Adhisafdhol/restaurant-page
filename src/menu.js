@@ -1,4 +1,4 @@
-import img from './img/eiliv-aceron-uBigm8w_MpA-unsplash.jpg';
+import img from './img/eiliv-aceron-uBigm8w_MpA-unsplash-hd.jpg';
 
 function menu() {
   const menuContainer = document.createElement('menu');
